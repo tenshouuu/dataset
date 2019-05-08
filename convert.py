@@ -60,4 +60,5 @@ def read_and_decode(filename_queue):
 
   return image, label
 
-print(read_and_decode(['./exported_results/export_bubble90076_00001.jpg']))
+filename_queue = tf.train.string_input_producer(['./exported_results/export_bubble90076_00001.jpg']) #  list of files to read
+print(read_and_decode(filename_queue))
